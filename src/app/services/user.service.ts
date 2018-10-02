@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 import { GLOBAL } from './global';
 import { map } from 'rxjs/operators';
+import { jsonpFactory } from '@angular/http/src/http_module';
 
 @Injectable()
 export class UserService{
@@ -18,6 +19,16 @@ export class UserService{
         let headers = new Headers({'Content-Type':'application/json'});
 
         return this._http.post(this.url+'register', params, {headers: headers})
+                         .pipe(map(res => res.json()));
+    }
+    signup(user_to_login, gettoken = null){
+        if(gettoken != null){
+            user_to_login.gettoken = gettoken;
+        }
+        let params = JSON.stringify(user_to_login);
+        let headers = new Headers({'Content-type' : 'application/json'});
+
+        return this._http.post(this.url+'login', params, {headers: headers})
                          .pipe(map(res => res.json()));
     }
 }
