@@ -1,3 +1,7 @@
+.pointer{
+    cursor: pointer;
+}
+
 .navigation.col-lg-12{
     margin-top: 10px;
 }
@@ -20,6 +24,23 @@
 .navbar-default .navbar-nav>li>a:hover{
     transition:all 300ms;
     border-bottom: 3px solid aqua;
+}
+
+.image_for_edit img{
+    width: 60px;
+}
+
+.avatar{
+    width: 35px;
+    height: 35px;
+    border-radius: 700px;
+    overflow: hidden;
+    margin-top: 9px;
+    margin-right: 2px;
+}
+
+.avatar img{
+    height: 45px;
 }
 
 .boton_transiciones{
@@ -100,3 +121,4 @@
         background: greenyellow;
     }
 }
+
