@@ -14,13 +14,15 @@ import { EditComponent } from './components/edit/edit.component';
 // Servicios
 import { UserService } from '../services/user.service';
 import { AdminGuard } from '../services/admin.guard';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
     declarations:[
         MainComponent,
         ListComponent,
         AddComponent,
-        EditComponent
+        EditComponent,
+        SearchPipe
     ],
     imports: [
         CommonModule,
