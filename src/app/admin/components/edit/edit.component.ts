@@ -7,10 +7,13 @@ import { UserService } from '../../../services/user.service';
 import { UploadService } from '../../../services/upload.service';
 import { Animal } from '../../../models/animal';
 
+import { fadeLateral } from '../../animation';
+
 @Component({
   selector: 'admin-edit',
   templateUrl: '../add/add.component.html',
-  providers: [UserService, AnimalService, UploadService]
+  providers: [UserService, AnimalService, UploadService],
+  animations: [fadeLateral]
 })
 export class EditComponent implements OnInit {
     public title: string; 

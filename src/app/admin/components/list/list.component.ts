@@ -8,10 +8,13 @@ import { UserService } from '../../../services/user.service';
 import { UploadService } from '../../../services/upload.service';
 import { Animal } from '../../../models/animal';
 
+import { fadeLateral } from '../../animation';
+
 @Component({
   selector: 'admin-list',
   templateUrl: './list.component.html',
-  providers: [AnimalService, UserService]
+  providers: [AnimalService, UserService],
+  animations: [fadeLateral]
 })
 export class ListComponent implements OnInit {
     public title: string;

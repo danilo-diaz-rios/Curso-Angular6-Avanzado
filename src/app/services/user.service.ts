@@ -70,4 +70,8 @@ export class UserService{
         return this._http.put(this.url+'update-user/'+user_to_update._id, params, {headers: headers})
                          .pipe(map(res => res.json()));       
     }
+
+    getKeepers(){
+        return this._http.get(this.url+'keepers').pipe(map(res => res.json()));
+    }
 }
